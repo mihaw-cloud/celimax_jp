@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>셀리맥스 × 발렌 · Qoo10 메가와리 6월 회고록</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--navy:#0A1442;--navy2:#16204d;--blue:#4472C4;--accent:#ED7D31;--green:#1F8A4C;--red:#C0392B;--ink:#1a1f36;--muted:#6b7280;--bg:#fff;--soft:#f5f7fb;--line:#e4e9f2;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard',-apple-system,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;letter-spacing:-0.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+section{padding:80px 0;border-bottom:1px solid var(--line)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;margin-bottom:14px}
+h2.sec{font-size:clamp(26px,3.4vw,38px);font-weight:800;line-height:1.25;color:var(--navy);letter-spacing:-0.03em;margin-bottom:18px}
+.lead{font-size:17px;color:#3b4252;max-width:780px;margin-bottom:8px}
+.muted{color:var(--muted)}strong{font-weight:700}
+.pos{color:var(--green);font-weight:700}.neg{color:var(--red);font-weight:700}.acc{color:var(--accent);font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:rgba(10,20,66,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-size:19px;font-weight:800;color:#fff}.brand b{color:var(--accent)}
+.navlinks{display:flex;gap:20px}
+.navlinks a{color:#c7cee0;text-decoration:none;font-size:14px;font-weight:600;transition:color .2s}
+.navlinks a:hover{color:#fff}
+@media(max-width:860px){.navlinks{display:none}}
+.hero{background:radial-gradient(1200px 500px at 80% -10%,#24386e 0,transparent 60%),linear-gradient(135deg,#0A1442 0%,#16204d 55%,#1d2a5e 100%);color:#fff;border:none;padding:84px 0;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 85% 0%,rgba(68,114,196,.35),transparent 60%)}
+.hero .wrap{position:relative;z-index:2}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.14em;color:#9fb1e6;border:1px solid rgba(159,177,230,.4);border-radius:999px;padding:7px 15px;margin-bottom:24px}
+.tag .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.hero h1{font-size:clamp(32px,5vw,54px);font-weight:800;line-height:1.18;letter-spacing:-0.035em;margin-bottom:22px}
+.hero h1 .hl{color:#7ea0e8}
+.hero h1 .ac{color:var(--accent)}
+.hero p.sub{font-size:18px;color:#c4cce4;max-width:780px;margin-bottom:40px;line-height:1.75}
+.meta{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.14);padding-top:26px}
+.meta .m{padding-right:38px;margin-right:38px;border-right:1px solid rgba(255,255,255,.14)}
+.meta .m:last-child{border-right:none}
+.meta .k{font-size:12px;color:#8b97c4;letter-spacing:.08em;margin-bottom:5px}
+.meta .v{font-size:16px;color:#fff;font-weight:700}
+@media(max-width:600px){.meta .m{border-right:none;border-bottom:1px solid rgba(255,255,255,.12);padding:10px 0;margin:0;width:100%}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+.stat{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+.stat .num{font-size:clamp(26px,3.4vw,38px);font-weight:800;color:var(--navy);letter-spacing:-0.03em;line-height:1.1}
+.stat .num.acc{color:var(--accent)}.stat .num.pos{color:var(--green)}.stat .num.neg{color:var(--red)}
+.stat .lbl{font-size:13.5px;color:var(--muted);margin-top:8px;font-weight:600}
+.stat .sub{font-size:12.5px;color:#9aa3b2;margin-top:3px}
+@media(max-width:780px){.stats{grid-template-columns:repeat(2,1fr)}}
+.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:880px){.g4,.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 12px 30px rgba(16,28,70,.08);transform:translateY(-2px)}
+.card .ic{font-size:23px;margin-bottom:10px}
+.card .no{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:8px}
+.card h3{font-size:16.5px;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.4}
+.card p{font-size:14px;color:#4b5563;line-height:1.65}
+.callout{background:linear-gradient(180deg,#fff8ef,#fff3e2);border:1px solid #f3d9b5;border-left:5px solid var(--accent);border-radius:12px;padding:22px 26px;margin-top:26px;font-size:15.5px;color:#5a4318;line-height:1.7}
+.callout b{color:#7a3d00}
+.callout.navy{background:linear-gradient(180deg,#f3f6fc,#eef2fb);border-color:#cdd9f0;border-left-color:var(--blue);color:#1f2a4d}
+.callout.navy b{color:var(--navy)}
+.chartbox{background:var(--soft);border:1px solid var(--line);border-radius:18px;padding:30px 28px;margin-top:24px}
+.chartbox .ctitle{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:22px}
+.bars{display:flex;align-items:flex-end;gap:24px;height:230px;padding-top:10px}
+.barcol{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.barcol .bval{font-size:15px;font-weight:800;color:var(--navy);margin-bottom:8px}
+.barcol .bar{width:62%;max-width:88px;border-radius:8px 8px 0 0;background:var(--blue)}
+.barcol .blabel{font-size:13px;color:var(--muted);margin-top:12px;font-weight:600;text-align:center;line-height:1.35}
+.barcol .bsub{font-size:11.5px;color:#9aa3b2}
+.daybars{display:flex;align-items:flex-end;gap:6px;height:220px}
+.daycol{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.daycol .db{width:78%;border-radius:4px 4px 0 0;background:#9db4dd}
+.daycol .dl{font-size:10.5px;color:#8a93a6;margin-top:6px;text-align:center;line-height:1.25}
+.hbar{display:grid;grid-template-columns:230px 1fr 96px;align-items:center;gap:14px;margin-bottom:12px}
+.hbar .hlbl{font-size:13px;font-weight:700;color:#374151;text-align:right}
+.hbar .htrack{background:#e9edf5;border-radius:6px;height:24px;overflow:hidden}
+.hbar .hfill{height:100%;border-radius:6px;background:linear-gradient(90deg,#5b86d6,#3a63b8)}
+.hbar .hfill.acc{background:linear-gradient(90deg,#f0a763,#e07d2f)}
+.hbar .hfill.neg{background:linear-gradient(90deg,#e88080,#c0392b)}
+.hbar .hval{font-size:13.5px;font-weight:800}
+@media(max-width:600px){.hbar{grid-template-columns:130px 1fr 64px;gap:8px}.hbar .hlbl{font-size:11px}}
+.tbl{width:100%;border-collapse:collapse;margin-top:22px;font-size:14px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.tbl th{background:var(--navy);color:#fff;font-weight:700;padding:12px 14px;text-align:left;font-size:13px}
+.tbl td{padding:11px 14px;border-top:1px solid var(--line)}
+.tbl tr:nth-child(even) td{background:var(--soft)}
+.tbl .hi{background:#eaf0fb !important;font-weight:700}
+.tbl td.c{text-align:center}
+.steps{display:flex;gap:14px;margin-top:26px}
+.step{flex:1;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 20px;position:relative}
+.step .sn{font-size:12px;font-weight:800;color:var(--accent);margin-bottom:10px}
+.step h4{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.step p{font-size:13px;color:#4b5563;line-height:1.55}
+.step .arr{position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:#c3ccde;font-size:20px}
+.step:last-child .arr{display:none}
+@media(max-width:820px){.steps{flex-direction:column}.step .arr{display:none}}
+.list{margin-top:18px}
+.li{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.li .ln{flex:none;width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.li .lt{font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:3px}
+.li .ld{font-size:14px;color:#4b5563;line-height:1.6}
+.cmpgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+.cmpgrid figure{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(16,28,70,.06)}
+.cmpgrid figure .ph{width:100%;height:200px;background:#eef2f8;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:11px;text-align:center;padding:10px}
+.cmpgrid figcaption{font-size:12px;color:#374151;text-align:center;padding:8px;font-weight:600}
+@media(max-width:760px){.cmpgrid{grid-template-columns:1fr 1fr}}
+.imgcap2{font-size:13px;font-weight:700;color:var(--blue);margin:26px 0 0;letter-spacing:.02em}
+.creative-box{border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:18px}
+.creative-box h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.creative-box .tagline{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700;letter-spacing:.05em;margin-bottom:10px}
+.creative-box .tagline.ok{background:#e6f4ec;color:var(--green)}
+.creative-box .tagline.ng{background:#fce8e6;color:var(--red)}
+.creative-box .tagline.mid{background:#fff3e2;color:var(--accent)}
+.creative-box .data{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
+.creative-box .data .it .k{font-size:11px;color:#9aa3b2;font-weight:600}
+.creative-box .data .it .v{font-size:14px;font-weight:800;color:var(--navy);margin-top:2px}
+@media(max-width:760px){.creative-box .data{grid-template-columns:1fr 1fr}}
+footer{background:var(--navy);color:#c4cce4;padding:50px 0;border:none}
+footer .wrap{display:flex;flex-direction:column;gap:12px}
+footer .fbrand{font-size:21px;font-weight:800;color:#fff}.footer .fbrand b{color:var(--accent)}
+footer .fnote{font-size:13px;color:#8b97c4;line-height:1.7}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <div class="brand">valen<b>·</b>셀리맥스</div>
+ <div class="navlinks">
+  <a href="#snapshot">한눈에</a><a href="#sales">매출</a><a href="#daily">일자추이</a><a href="#ads">광고·ROAS</a><a href="#creative">META</a><a href="#newcre">신규소재</a><a href="#sku">상품</a><a href="#best">잘한점</a><a href="#next">NEXT</a>
+ </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <span class="tag"><span class="dot"></span>CONFIDENTIAL · 셀리맥스 × 발렌</span>
+ <h1>객단가가 끌어올린 매출,<br>종료일에 <span class="ac">+50.3% 큰 폭 상승</span>한<br>6월 메가와리.</h1>
+ <p class="sub">26.2Q 셀리맥스는 직전 3월 대비 매출 <strong style="color:#7ea0e8">+14.6%</strong> 상승했습니다.<br>
+   광고비 +49% 증액 흐름에서 객단가 <strong style="color:#7ea0e8">+16.1%</strong>가 매출 상승을 이끌었고,<br>
+   종료일(6/10) 매출은 ¥46,452,112로 기간 내 최고치에 도달했습니다.</p>
+ <div class="meta">
+  <div class="m">
+    <div class="k">분석 기간</div>
+    <div class="v">2026.05.25 – 06.11 (18일)</div>
+    <div style="font-size:11.5px;color:#8b97c4;margin-top:6px;line-height:1.5;font-weight:500">
+      티저 5/25 – 5/29 17:00 (5일)<br>
+      본방 5/29 17:00 – 6/10 (13일)<br>
+      6/11 새벽 2:00까지 쿠폰 사용 가능
+    </div>
+  </div>
+  <div class="m"><div class="k">비교 기준</div><div class="v">26년 3월 메가와리</div></div>
+  <div class="m"><div class="k">작성</div><div class="v">발렌 글로벌센터</div></div>
+  <div class="m"><div class="k">대시보드</div><div class="v"><a href="https://app.adriel.com/#/dashboard/shared/udUXkytGGPgJArn2?viewId=237977" target="_blank" rel="noopener" style="color:#7ea0e8;text-decoration:underline;text-underline-offset:3px;font-weight:700">Adriel ↗</a></div></div>
+ </div>
+</div></header>
+
+<section id="snapshot"><div class="wrap">
+ <span class="eyebrow">00 · 한눈에</span>
+ <h2 class="sec">6월 메가와리, 핵심 4가지</h2>
+ <p class="lead">단가 정책 강화와 후반부 매출 상승 흐름으로 직전 메가와리 대비 매출이 큰 폭 상승했습니다.</p>
+ <div class="stats">
+  <div class="stat"><div class="num pos">+14.6%</div><div class="lbl">3월 대비 매출 상승</div><div class="sub">¥247,437,465 → ¥283,636,052</div></div>
+  <div class="stat"><div class="num acc">+16.1%</div><div class="lbl">객단가 상승</div><div class="sub">¥2,372 → ¥2,754</div></div>
+  <div class="stat"><div class="num pos">+50.3%</div><div class="lbl">종료일(6/10) 매출 상승</div><div class="sub">¥30,896,938 → ¥46,452,112 (vs 3/11)</div></div>
+  <div class="stat"><div class="num acc">65.78%</div><div class="lbl">신규 고객 비율 유지</div><div class="sub">신규 67,741명 / 전체 102,990명</div></div>
+ </div>
+ <div class="callout navy">3월이 <b>고관여 고객 중심의 안정적 매출 구조</b>였다면, 6월은 <b>단가 정책 강화와 종료일 푸시로 매출을 끌어올린 구조</b>입니다.<br>
+   광고비는 직전 대비 +49% 증액되었고 그 중 <b>약 94%(₩361,773,111)는 자사몰 랜딩 파트너십(PS) 캠페인</b>으로 집행되었습니다.
+   메가와리향 광고(구매전환 ASC + 트래픽 타겟확장)는 ₩21,437,331 규모이며 ASC 캠페인 CTR 4.38%로 우수한 수준을 보였습니다.</div>
+</div></section>
+
+<section id="sales"><div class="wrap">
+ <span class="eyebrow">01 · 매출 성과</span>
+ <h2 class="sec">매출은 큰 폭 상승, 객단가가 핵심 동인</h2>
+ <p class="lead">직전 3월 메가와리 대비 매출 <span class="pos">+14.6%</span> 상승. 광고비 +49% 증액 흐름에서 매출 상승률은 +14.6%로 ROAS는 다소 하향 흐름.</p>
+
+ <div class="chartbox">
+  <div class="ctitle">메가와리 총매출 추이 (¥엔, 취소반영) — 3월 vs 6월</div>
+  <div class="bars">
+   <div class="barcol"><div class="bval">¥247,437,465</div><div class="bar" style="height:87%;background:#b9c2d6"></div><div class="blabel">26년 3월<br><span class="bsub">2/27 – 3/11 / 13일</span></div></div>
+   <div class="barcol"><div class="bval">¥283,636,052</div><div class="bar" style="height:100%;background:var(--navy)"></div><div class="blabel">26년 6월<br><span class="bsub" style="color:var(--green);font-weight:700">5/29 – 6/10 / +14.6%</span></div></div>
+  </div>
+ </div>
+
+ <table class="tbl">
+  <tr><th>항목</th><th>26년 3월</th><th>26년 6월</th><th>증감</th></tr>
+  <tr class="hi"><td><b>총 매출 (¥, 취소반영)</b></td><td class="c">¥247,437,465</td><td class="c"><b>¥283,636,052</b></td><td class="c"><b style="color:#1F8A4C">+14.6%</b></td></tr>
+  <tr><td>거래 수량</td><td class="c">104,322</td><td class="c">102,990</td><td class="c"><span class="neg">-1.3%</span></td></tr>
+  <tr><td>객단가 (¥)</td><td class="c">¥2,372</td><td class="c"><b>¥2,754</b></td><td class="c"><b style="color:#1F8A4C">+16.1%</b></td></tr>
+  <tr><td>총 PV</td><td class="c">1,206,227</td><td class="c">1,301,899</td><td class="c"><span class="pos">+7.9%</span></td></tr>
+  <tr><td>유입자수</td><td class="c">748,584</td><td class="c">863,599</td><td class="c"><span class="pos">+15.4%</span></td></tr>
+  <tr><td>장바구니</td><td class="c">160,129</td><td class="c">186,318</td><td class="c"><span class="pos">+16.4%</span></td></tr>
+  <tr><td>구매 전환율</td><td class="c">12.30%</td><td class="c">11.93%</td><td class="c"><span class="neg">-0.37%p</span></td></tr>
+ </table>
+ <div class="callout">거래 수량은 거의 유지(-1.3%)되었으나 <b>객단가가 +16.1% 상승</b>하며 매출 +14.6%를 견인했습니다.<br>
+   유입자수 +15.4% / 장바구니 +16.4%로 트래픽은 큰 폭 확장됐지만, 평균 구매 전환율은 12.30%→11.93%로 0.37%p 하락.
+   <b>단가 정책 강화 + 트래픽 확장이 매출 상승의 두 축</b>입니다.</div>
+</div></section>
+
+<section id="daily"><div class="wrap">
+ <span class="eyebrow">02 · 일자별 추이 · 종료일 패턴</span>
+ <h2 class="sec">후반부에 매출이 큰 폭 상승했습니다</h2>
+ <p class="lead">메가와리 9~13일차에 매출이 큰 폭 상승했고, 종료일(6/10) 매출 <strong>¥46,452,112</strong>로 13일 중 최고치. 종료일 구매 전환율 <strong>21.98%</strong>는 기간 평균(11.93%) 대비 1.84배.</p>
+
+ <div class="chartbox">
+  <div class="ctitle">일자별 매출 (¥엔, 취소반영) — 13일 본방</div>
+  <div class="daybars">
+   <div class="daycol"><div class="db" style="height:72%"></div><div class="dl">5/29<br>금</div></div>
+   <div class="daycol"><div class="db" style="height:55%"></div><div class="dl">5/30<br>토</div></div>
+   <div class="daycol"><div class="db" style="height:43%"></div><div class="dl">5/31<br>일</div></div>
+   <div class="daycol"><div class="db" style="height:43%"></div><div class="dl">6/1<br>월</div></div>
+   <div class="daycol"><div class="db" style="height:53%"></div><div class="dl">6/2<br>화</div></div>
+   <div class="daycol"><div class="db" style="height:56%"></div><div class="dl">6/3<br>수</div></div>
+   <div class="daycol"><div class="db" style="height:29%"></div><div class="dl">6/4<br>목</div></div>
+   <div class="daycol"><div class="db" style="height:24%"></div><div class="dl">6/5<br>금</div></div>
+   <div class="daycol"><div class="db" style="height:51%"></div><div class="dl">6/6<br>토</div></div>
+   <div class="daycol"><div class="db" style="height:36%"></div><div class="dl">6/7<br>일</div></div>
+   <div class="daycol"><div class="db" style="height:21%"></div><div class="dl">6/8<br>월</div></div>
+   <div class="daycol"><div class="db" style="height:27%"></div><div class="dl">6/9<br>화</div></div>
+   <div class="daycol"><div class="db" style="height:100%;background:var(--accent)"></div><div class="dl" style="color:var(--accent);font-weight:800">6/10<br>수★</div></div>
+  </div>
+ </div>
+
+ <h3 style="font-size:18px;color:var(--navy);margin:32px 0 4px;font-weight:700">3월 동일 일자 대비 매출 비교 (¥엔)</h3>
+ <table class="tbl">
+  <tr><th>일자</th><th>6월 매출 (¥)</th><th>3월 매출 (¥)</th><th>증감</th></tr>
+  <tr><td>1일차(금)</td><td class="c">¥33,516,937</td><td class="c">¥34,747,823</td><td class="c"><span class="neg">-3.5%</span></td></tr>
+  <tr><td>2일차(토)</td><td class="c">¥25,375,334</td><td class="c">¥33,276,878</td><td class="c"><span class="neg">-23.7%</span></td></tr>
+  <tr><td>3일차(일)</td><td class="c">¥19,954,199</td><td class="c">¥30,594,634</td><td class="c"><span class="neg">-34.8%</span></td></tr>
+  <tr><td>4일차(월)</td><td class="c">¥20,182,305</td><td class="c">¥13,868,317</td><td class="c"><span class="pos">+45.5%</span></td></tr>
+  <tr><td>5일차(화)</td><td class="c">¥24,717,269</td><td class="c">¥16,992,771</td><td class="c"><span class="pos">+45.5%</span></td></tr>
+  <tr><td>6일차(수)</td><td class="c">¥25,861,773</td><td class="c">¥13,297,125</td><td class="c"><span class="pos">+94.5%</span></td></tr>
+  <tr><td>7일차(목)</td><td class="c">¥13,653,986</td><td class="c">¥27,120,275</td><td class="c"><span class="neg">-49.7%</span></td></tr>
+  <tr><td>8일차(금)</td><td class="c">¥10,994,716</td><td class="c">¥9,726,734</td><td class="c"><span class="pos">+13.0%</span></td></tr>
+  <tr class="hi"><td><b>9일차(토)</b></td><td class="c"><b>¥23,749,596</b></td><td class="c">¥11,057,965</td><td class="c"><b style="color:#1F8A4C">+114.8% ★</b></td></tr>
+  <tr><td>10일차(일)</td><td class="c">¥16,545,873</td><td class="c">¥11,401,348</td><td class="c"><span class="pos">+45.1%</span></td></tr>
+  <tr><td>11일차(월)</td><td class="c">¥9,982,316</td><td class="c">¥7,482,248</td><td class="c"><span class="pos">+33.4%</span></td></tr>
+  <tr class="hi"><td><b>12일차(화)</b></td><td class="c"><b>¥12,649,636</b></td><td class="c">¥6,974,409</td><td class="c"><b style="color:#1F8A4C">+81.4% ★</b></td></tr>
+  <tr class="hi"><td><b>13일차(수, 종료일)</b></td><td class="c"><b>¥46,452,112</b></td><td class="c">¥30,896,938</td><td class="c"><b style="color:#ED7D31">+50.3% ★</b></td></tr>
+ </table>
+
+ <div class="callout">메가와리 초반(1~3일차)은 3월 대비 약세였으나, 4일차부터 6월이 큰 폭 상승. 특히 후반부 <b>9일차 +114.8% / 12일차 +81.4% / 13일차 +50.3%</b>로 마감 가속 흐름.<br>
+   주말쿠폰(6/5~6/7)과 종료일 푸시가 시점별 매출 상승의 핵심 트리거로 작동했습니다.</div>
+
+ <div class="grid g3" style="margin-top:24px">
+  <div class="stat"><div class="num acc">21.98%</div><div class="lbl">종료일(6/10) 구매 전환율</div><div class="sub">기간 평균 11.93% 대비 1.84배</div></div>
+  <div class="stat"><div class="num pos">+38.5%</div><div class="lbl">종료일 유입자수 (vs 3/11)</div><div class="sub">59,541 → 82,481</div></div>
+  <div class="stat"><div class="num pos">+47.1%</div><div class="lbl">종료일 장바구니 (vs 3/11)</div><div class="sub">15,456 → 22,743</div></div>
+ </div>
+</div></section>
+
+<section id="ads"><div class="wrap">
+ <span class="eyebrow">03 · 광고비 · ROAS</span>
+ <h2 class="sec">광고비의 94%는 자사몰 랜딩 PS 캠페인</h2>
+ <p class="lead">통합 광고비 <strong>₩401,486,211</strong> 중 <strong>약 94%(₩361,773,111)는 자사몰 랜딩 파트너십(PS) 캠페인</strong>으로 집행되었습니다. 메가와리향 광고(구매전환 ASC + 트래픽)는 ₩21,437,331 규모로 ASC 캠페인 CTR 4.38%를 기록했습니다.</p>
+
+ <table class="tbl">
+  <tr><th>채널</th><th>광고비 (원 표기)</th><th>원화 환산 (참고)</th><th>비고</th></tr>
+  <tr class="hi"><td><b>META (통합)</b></td><td class="c" colspan="2">₩383,210,442</td><td>전체 META 광고비 (PS + 메가와리향)</td></tr>
+  <tr><td><span style="margin-left:14px">└ 자사몰 랜딩 PS 캠페인</span></td><td class="c" colspan="2">₩361,773,111</td><td>인플루언서 다수 / 광고비 비중 94%</td></tr>
+  <tr><td><span style="margin-left:14px">└ 메가와리향 (ASC + 트래픽)</span></td><td class="c" colspan="2">₩21,437,331</td><td>전체 META의 5.6%</td></tr>
+  <tr><td><b>SingleONE</b></td><td class="c">¥120,710</td><td class="c">≈ ₩1,147,305</td><td>구매전환 + 장바구니 캠페인 / 환율 9.5046</td></tr>
+  <tr><td><b>인앱 (Qoo10)</b></td><td class="c">¥127,788</td><td class="c">≈ ₩1,214,579</td><td>6/1~6/3만 / 6/4~6/10 추가 수령 필요</td></tr>
+  <tr class="hi"><td><b>총 광고비 (싱글원·인앱 포함)</b></td><td class="c" colspan="2"><b>₩401,486,211</b></td><td><b>3월 대비 +49% 증액</b></td></tr>
+ </table>
+
+ <div class="chartbox">
+  <div class="ctitle">META 광고비 구성 비중</div>
+  <div class="hbar"><div class="hlbl">자사몰 랜딩 PS 캠페인</div><div class="htrack"><div class="hfill acc" style="width:100%"></div></div><div class="hval acc">94.4%</div></div>
+  <div class="hbar"><div class="hlbl">메가와리향 (ASC + 트래픽)</div><div class="htrack"><div class="hfill" style="width:6%"></div></div><div class="hval">5.6%</div></div>
+ </div>
+
+ <h3 style="font-size:18px;color:var(--navy);margin:36px 0 4px;font-weight:700">메가와리향 캠페인 상세</h3>
+ <table class="tbl">
+  <tr><th>캠페인</th><th>광고비 (₩)</th><th>노출</th><th>링크 클릭</th><th>CPC</th><th>CTR</th></tr>
+  <tr class="hi"><td><b>소스 집계</b></td><td class="c"><b>₩21,437,331</b></td><td class="c">3,488,487</td><td class="c">105,611</td><td class="c">₩203</td><td class="c"><b>3.03%</b></td></tr>
+  <tr><td>260529_구매_메가와리_본방-ASC</td><td class="c">₩14,141,252</td><td class="c">1,004,679</td><td class="c">43,958</td><td class="c">₩322</td><td class="c"><span class="pos">4.38%</span></td></tr>
+  <tr><td>260524_트래픽_메가와리_타겟확장</td><td class="c">₩7,296,079</td><td class="c">2,483,808</td><td class="c">61,653</td><td class="c">₩118</td><td class="c">2.48%</td></tr>
+ </table>
+ <div class="callout">메가와리향 광고비는 ₩21,437,331(전체 META의 5.6%) 비중이지만, <b>ASC 캠페인 CTR 4.38% / 트래픽 CPC ₩118</b>로 효율 측면에서 우수한 수준.<br>
+   자사몰 랜딩 PS 캠페인은 광고비 비중 94%(₩361,773,111)로 운영되었으며, META 픽셀 추적 ROAS 1.1%로 측정되어 픽셀 attribution 한계 점검이 필요합니다.</div>
+
+ <h3 style="font-size:18px;color:var(--navy);margin:36px 0 4px;font-weight:700">자사몰 랜딩 PS 캠페인 — 인플루언서 상위 4종</h3>
+ <table class="tbl">
+  <tr><th>인플루언서</th><th>광고비 (₩)</th><th>노출</th><th>링크 클릭</th><th>CTR</th><th>구매</th><th>ROAS</th></tr>
+  <tr><td>hani_koreacosme</td><td class="c">₩49,516,513</td><td class="c">2,508,551</td><td class="c">73,605</td><td class="c">2.93%</td><td class="c">12</td><td class="c">0.96%</td></tr>
+  <tr class="hi"><td>xtrina</td><td class="c">₩52,195,584</td><td class="c">2,048,316</td><td class="c">62,192</td><td class="c">3.04%</td><td class="c"><b>14</b></td><td class="c"><b>1.46%</b></td></tr>
+  <tr><td>_kayodoll_</td><td class="c">₩21,340,887</td><td class="c">766,941</td><td class="c">33,932</td><td class="c"><span class="pos">4.42%</span></td><td class="c">-</td><td class="c">0%</td></tr>
+  <tr><td>kanan_cosme (크림마스크)</td><td class="c">₩870,107</td><td class="c">73,562</td><td class="c">6,100</td><td class="c"><span class="pos">8.29%</span></td><td class="c">-</td><td class="c">-</td></tr>
+ </table>
+</div></section>
+
+<section id="creative"><div class="wrap">
+ <span class="eyebrow">04 · META 지면별 · 연령대별 인사이트</span>
+ <h2 class="sec">Instagram 3종 지면이 효율 견인</h2>
+ <p class="lead">메가와리향 광고에서 <strong>Instagram feed/stories/reels</strong> 3종 지면이 CTR 4.8~5.8%로 우수한 수준. 연령대별로는 <strong>45~64세</strong>가 CTR 4.4~5.2%로 핵심 타겟층으로 확인.</p>
+
+ <div class="chartbox">
+  <div class="ctitle">지면별 CTR (메가와리향)</div>
+  <div class="hbar"><div class="hlbl">Instagram_feed</div><div class="htrack"><div class="hfill acc" style="width:100%"></div></div><div class="hval acc">5.77%</div></div>
+  <div class="hbar"><div class="hlbl">Instagram_stories</div><div class="htrack"><div class="hfill acc" style="width:93%"></div></div><div class="hval acc">5.37%</div></div>
+  <div class="hbar"><div class="hlbl">Instagram_reels</div><div class="htrack"><div class="hfill acc" style="width:84%"></div></div><div class="hval acc">4.83%</div></div>
+  <div class="hbar"><div class="hlbl">Facebook_reels</div><div class="htrack"><div class="hfill" style="width:43%"></div></div><div class="hval">2.47%</div></div>
+  <div class="hbar"><div class="hlbl">Facebook_stories</div><div class="htrack"><div class="hfill" style="width:40%"></div></div><div class="hval">2.31%</div></div>
+  <div class="hbar"><div class="hlbl">Facebook_feed</div><div class="htrack"><div class="hfill" style="width:31%"></div></div><div class="hval">1.80%</div></div>
+  <div class="hbar"><div class="hlbl">Facebook_instream_video</div><div class="htrack"><div class="hfill neg" style="width:21%"></div></div><div class="hval neg">1.21%</div></div>
+  <div class="hbar"><div class="hlbl">Threads_feed</div><div class="htrack"><div class="hfill neg" style="width:15%"></div></div><div class="hval neg">0.84%</div></div>
+ </div>
+ <div class="callout">Instagram 3종(feed/stories/reels) 광고비 합 <b>₩18,213,425</b>로 메가와리향 광고비의 85%를 차지했으며, CTR 5%대로 핵심 견인 지면.<br>
+   Threads와 Facebook_instream_video는 CTR 1% 안팎으로 효율 저조 — 차기 시즌 광고비 재분배 검토 필요.</div>
+
+ <h3 style="font-size:18px;color:var(--navy);margin:36px 0 4px;font-weight:700">연령대별 효율 (메가와리향)</h3>
+ <div class="chartbox">
+  <div class="ctitle">연령대별 CTR</div>
+  <div class="hbar"><div class="hlbl">55-64세</div><div class="htrack"><div class="hfill acc" style="width:100%"></div></div><div class="hval acc">5.16%</div></div>
+  <div class="hbar"><div class="hlbl">45-54세</div><div class="htrack"><div class="hfill acc" style="width:85%"></div></div><div class="hval acc">4.39%</div></div>
+  <div class="hbar"><div class="hlbl">65+</div><div class="htrack"><div class="hfill" style="width:73%"></div></div><div class="hval">3.75%</div></div>
+  <div class="hbar"><div class="hlbl">35-44세</div><div class="htrack"><div class="hfill" style="width:53%"></div></div><div class="hval">2.76%</div></div>
+  <div class="hbar"><div class="hlbl">18-24세</div><div class="htrack"><div class="hfill" style="width:50%"></div></div><div class="hval">2.60%</div></div>
+  <div class="hbar"><div class="hlbl">25-34세</div><div class="htrack"><div class="hfill" style="width:40%"></div></div><div class="hval">2.04%</div></div>
+ </div>
+ <div class="callout"><b>45~64세 중장년층이 CTR 4.4~5.2%로 핵심 타겟층</b>으로 확인. 셀리맥스 레티날 부스터(주름·탄력 케어)의 효능 소구가 해당 연령대에 강하게 작동.<br>
+   25~34세는 광고비 비중(₩4,522,164 / 21%)에 비해 CTR 2.04%로 효율 다소 낮음 — 해당 연령대 소구 콘셉트 재검토 필요.</div>
+</div></section>
+
+<section id="newcre"><div class="wrap">
+ <span class="eyebrow">05 · 신규 외부광고 소재 시도</span>
+ <h2 class="sec">이번 메가와리 신규 투입 소재 3종</h2>
+ <p class="lead">이번 시즌에 신규로 시도한 3종 소재(임상 데이터·나구모 호우카·카드뉴스)의 운영 결과를 정리했습니다.</p>
+
+ <div class="creative-box">
+  <span class="tagline ng">집행 불가</span>
+  <h4>① 임상 데이터 소구 소재</h4>
+  <p style="font-size:14px;color:#4b5563;line-height:1.65">
+   레티날샷 부스터의 <b>임상시험 결과(주름 개선·탄력 회복 등의 수치)</b>를 광고 소재로 활용하는 콘셉트로 기획했습니다.
+   기존 할인 위주 소구 대비 <b>신뢰도·전문성</b>을 강조해 구매 직전 단계 트래픽 모수 확대를 노렸습니다.<br><br>
+   다만 <b>META 광고 정책 심사 단계에서 미통과</b>되어 광고 운영 자체가 진행되지 못했습니다.
+   화장품 카테고리에서 임상 수치·효능 단정 표현은 META 정책상 제한이 강한 영역이며,
+   <b>차기 시즌에는 임상 결과의 시각화(그래프·일러스트), 사용 후기 형태, 블라인드 표현 등 대체 콘셉트</b>로 재구성이 필요합니다.
+  </p>
+  <div class="data">
+   <div class="it"><div class="k">노출</div><div class="v">—</div></div>
+   <div class="it"><div class="k">링크 클릭</div><div class="v">—</div></div>
+   <div class="it"><div class="k">CTR</div><div class="v">—</div></div>
+   <div class="it"><div class="k">픽셀</div><div class="v">—</div></div>
+  </div>
+ </div>
+
+ <div class="creative-box">
+  <span class="tagline mid">운영 지속 / 평균 수준</span>
+  <h4>② 나구모 호우카(南雲鳳華) 크림마스크 인플루언서 소재</h4>
+  <p style="font-size:14px;color:#4b5563;line-height:1.65">
+   일본 현지 인플루언서 <b>나구모 호우카(南雲鳳華)</b>의 영상 콘텐츠를 모공잡티 크림팩 마스크 광고 소재로 활용한 시도입니다.
+   기존 셀리맥스의 영상+할인 배너 소재 라인업과 차별화하여 <b>실사용·친밀도 기반의 콘셉트</b>로 신규 유저 유입 확보를 목표했습니다.<br><br>
+   결과는 <b>CTR 0.98%로 기대치 대비 평균 수준</b>에 그쳤습니다.
+   픽셀 이벤트는 104건 발생하며 일부 전환 잠재 모수를 확보했으나, 다른 메가와리향 광고 소재(평균 CTR 3.03%) 대비 효율은 다소 낮은 흐름.
+   <b>인플루언서 영상 자체의 광고 매체 적합도</b>와 <b>크림마스크 카테고리의 시즌 수요</b>를 추가 검증할 필요가 있습니다.
+  </p>
+  <div class="data">
+   <div class="it"><div class="k">노출</div><div class="v">17,833</div></div>
+   <div class="it"><div class="k">링크 클릭</div><div class="v">174</div></div>
+   <div class="it"><div class="k">CTR</div><div class="v">0.98%</div></div>
+   <div class="it"><div class="k">픽셀 / 지출</div><div class="v">104 / ₩310,607</div></div>
+  </div>
+ </div>
+
+ <div class="creative-box">
+  <span class="tagline ng">학습 기간 효율 저조 / OFF</span>
+  <h4>③ 카드뉴스 형식 소재</h4>
+  <p style="font-size:14px;color:#4b5563;line-height:1.65">
+   단품 가격·할인 위주 소구 대비 <b>제품 정보·성분·사용법 등 정보 전달형 카드뉴스 형식</b>을 새로 시도했습니다.
+   클릭 후 랜딩 페이지 체류시간 개선과 IC(결제시작) 잠재 모수 확대를 목표한 콘셉트입니다.<br><br>
+   다만 <b>학습 기간을 충분히 부여했음에도 노출 자체가 107회에 그쳤고</b>, 클릭은 3건에 불과해 OFF 처리되었습니다.
+   CTR 자체는 2.80%로 평균 대비 양호하나 절대 노출량이 미미하여 의미 있는 결과 도출이 어렵습니다.
+   <b>META 알고리즘 학습 단계에서 픽셀 이벤트·CTR 신호 부족으로 노출 확장이 이루어지지 못한 것</b>으로 판단되며,
+   다음 시즌에는 카드뉴스 콘셉트보다 영상·배너 위주의 검증된 소재 라인업 운영이 권장됩니다.
+  </p>
+  <div class="data">
+   <div class="it"><div class="k">노출</div><div class="v">107</div></div>
+   <div class="it"><div class="k">링크 클릭</div><div class="v">3</div></div>
+   <div class="it"><div class="k">CTR</div><div class="v">2.80%</div></div>
+   <div class="it"><div class="k">CPC</div><div class="v">₩121</div></div>
+  </div>
+ </div>
+
+ <div class="callout"><b>신규 소재 3종 종합 정리</b><br>
+   ① 임상 데이터 소구는 <b>META 정책상 집행 불가</b> — 다음 시즌 대체 표현 콘셉트 재기획 필요<br>
+   ② 나구모 호우카 영상 소재는 <b>CTR 0.98%로 평균 수준</b> — 인플루언서 매체 적합도·시즌 수요 추가 검증<br>
+   ③ 카드뉴스는 <b>학습 단계 노출 부족으로 OFF 처리</b> — META에 부적합한 콘셉트로 판단<br>
+   → <b>차기 시즌은 영상+할인 배너 + 1순위 레티날 부스터 광고세트 중심의 검증된 소재 라인업 운영이 권장</b>됩니다.</div>
+
+ <div class="imgcap2">▸ 신규 시도 소재 이미지</div>
+ <div class="cmpgrid">
+  <figure><img loading="lazy" src="./images/01_clinical_data.png" alt="임상 데이터 소구 (집행 불가)" onerror="this.onerror=null;this.src='./images/01_clinical_data.png'" style="width:100%;height:auto;display:block"><figcaption>임상 데이터 소구 (집행 불가)</figcaption></figure>
+  <figure><img loading="lazy" src="./images/02_nagumo_houka.png" alt="나구모 호우카 (크림마스크)" onerror="this.onerror=null;this.src='./images/02_nagumo_houka.png'" style="width:100%;height:auto;display:block"><figcaption>나구모 호우카 (크림마스크)</figcaption></figure>
+  <figure><img loading="lazy" src="./images/03_cardnews.png" alt="카드뉴스 (OFF)" onerror="this.onerror=null;this.src='./images/03_cardnews.png'" style="width:100%;height:auto;display:block"><figcaption>카드뉴스 (OFF)</figcaption></figure>
+  <figure><img loading="lazy" src="./images/04_megawari_top.png" alt="참고: 메가와리향 Top 소재" onerror="this.onerror=null;this.src='./images/04_megawari_top.png'" style="width:100%;height:auto;display:block"><figcaption>참고: 메가와리향 Top 소재</figcaption></figure>
+ </div>
+</div></section>
+
+<section id="sku"><div class="wrap">
+ <span class="eyebrow">06 · 상품별 판매</span>
+ <h2 class="sec">레티날샷 부스터가 매출의 44%</h2>
+ <p class="lead">TOP 1 상품 <strong>레티날샷 부스터</strong>가 단독으로 매출 44.0% 차지. TOP 5 상품 합계 매출의 약 68%, TOP 12 상품 합계 약 92%.</p>
+
+ <table class="tbl">
+  <tr><th>#</th><th>상품명</th><th>매출 (¥)</th><th>수량</th><th>비중</th><th>관련 광고세트</th></tr>
+  <tr class="hi"><td class="c">1</td><td><b>レチナールショット タイトニングブースター 15ml</b><br><span style="color:#6b7280;font-size:12px">(레티날샷 부스터)</span></td><td class="c">¥124,765,016</td><td class="c">52,026</td><td class="c"><b>44.0%</b></td><td>구매전환 ASC + 트래픽 + 자사몰 PS</td></tr>
+  <tr><td class="c">2</td><td>ノニアクネバブルクレンザー 1+1<br><span style="color:#6b7280;font-size:12px">(노니 버블폼 1+1)</span></td><td class="c">¥20,579,876</td><td class="c">9,677</td><td class="c">7.3%</td><td>트래픽 3순위(앰플 등)</td></tr>
+  <tr><td class="c">3</td><td>選べる美容液 1+1<br><span style="color:#6b7280;font-size:12px">(선택 미용액 1+1, 7종)</span></td><td class="c">¥17,326,080</td><td class="c">5,949</td><td class="c">6.1%</td><td>2순위 광고세트</td></tr>
+  <tr><td class="c">4</td><td>ノニアクネバブルクレンザー 2+2<br><span style="color:#6b7280;font-size:12px">(노니 버블폼 4개세트)</span></td><td class="c">¥16,614,441</td><td class="c">4,337</td><td class="c">5.9%</td><td>2순위 광고세트</td></tr>
+  <tr><td class="c">5</td><td>レチノールショット セラム&ブースターセット<br><span style="color:#6b7280;font-size:12px">(레티날+레티놀 세트)</span></td><td class="c">¥15,163,630</td><td class="c">4,297</td><td class="c">5.3%</td><td>구매전환 ASC</td></tr>
+  <tr><td class="c">6</td><td>カヨ コラボ 한정세트<br><span style="color:#6b7280;font-size:12px">(카요 콜라보)</span></td><td class="c">¥13,799,664</td><td class="c">3,122</td><td class="c">4.9%</td><td>트래픽 카요돌</td></tr>
+  <tr><td class="c">7</td><td>ポアブライトニング シミケアセラム 30ml<br><span style="color:#6b7280;font-size:12px">(모공잡티 세럼)</span></td><td class="c">¥11,782,877</td><td class="c">5,538</td><td class="c">4.2%</td><td>트래픽 3순위</td></tr>
+  <tr class="hi"><td class="c">8</td><td><b>6.10 限定特価 涼やかに澄む夏肌セット</b><br><span style="color:#6b7280;font-size:12px">(6/10 한정 종료일 세트)</span></td><td class="c">¥9,852,450</td><td class="c">1,984</td><td class="c"><b>3.5%</b></td><td>종료임박 캠페인 (6/5~6/10)</td></tr>
+  <tr><td class="c">9</td><td>KAYO 콜라보 レスキューセット<br><span style="color:#6b7280;font-size:12px">(KAYO 레스큐세트)</span></td><td class="c">¥6,918,391</td><td class="c">1,198</td><td class="c">2.4%</td><td>-</td></tr>
+  <tr><td class="c">10</td><td>ポアブライトニング シミケアクリーム<br><span style="color:#6b7280;font-size:12px">(모공잡티 크림)</span></td><td class="c">¥6,516,600</td><td class="c">2,675</td><td class="c">2.3%</td><td>-</td></tr>
+  <tr><td class="c">11</td><td>ポアブライトニング クリームマスク<br><span style="color:#6b7280;font-size:12px">(크림팩 마스크)</span></td><td class="c">¥3,797,697</td><td class="c">1,559</td><td class="c">1.3%</td><td>나구모 호우카 + kanan_cosme PS</td></tr>
+  <tr><td class="c">12</td><td>ノニ エネルギーアンプル 2.0<br><span style="color:#6b7280;font-size:12px">(노니 앰플 2세대)</span></td><td class="c">¥3,351,893</td><td class="c">1,419</td><td class="c">1.2%</td><td>-</td></tr>
+ </table>
+
+ <div class="grid g3" style="margin-top:24px">
+  <div class="stat"><div class="num acc">44.0%</div><div class="lbl">레티날 부스터 매출 비중</div><div class="sub">¥124,765,016 · 52,026개</div></div>
+  <div class="stat"><div class="num pos">~92%</div><div class="lbl">TOP 12 매출 집중도</div><div class="sub">롱테일 구조</div></div>
+  <div class="stat"><div class="num">3.5%</div><div class="lbl">6/10 한정 세트 매출 비중</div><div class="sub">¥9,852,450 / 단 1일 운영</div></div>
+ </div>
+
+ <div class="callout"><b>매출 구조 분석</b><br>
+   ① <b>레티날샷 부스터</b>가 단독으로 매출 44%를 차지 — META 구매전환 ASC 캠페인 광고비 ₩7,411,897 집중 운영의 결과<br>
+   ② <b>6/10 한정 종료일 세트</b>가 단 하루 운영으로 ¥9,852,450 매출 발생 (전체의 3.5%) — 종료임박 캠페인의 매출 상승 효과 확인<br>
+   ③ TOP 5 상품이 매출의 약 68%로 <b>매출 집중도가 매우 높음</b> — 차기 시즌 1순위 레티날 + 2~3순위 카테고리 보조 매출 구조 유지가 효과적</div>
+</div></section>
+
+<section id="best"><div class="wrap">
+ <span class="eyebrow">07 · 잘한 점</span>
+ <h2 class="sec">성과 BEST 5</h2>
+ <div class="list">
+  <div class="li"><div class="ln">1</div><div><div class="lt">3월 대비 매출 +14.6% 큰 폭 상승 ⭐</div><div class="ld">¥247,437,465 → ¥283,636,052 / +¥36,198,587. 광고비 +49% 증액 흐름에서 매출 상승률 +14.6%로 ROAS는 다소 하향했지만 절대 매출 큰 폭 상승.</div></div></div>
+  <div class="li"><div class="ln">2</div><div><div class="lt">객단가 +16.1% 큰 폭 상승 — 단가 정책 효과 확인</div><div class="ld">¥2,372 → ¥2,754. 거래 수량은 거의 유지(-1.3%)된 가운데 객단가가 매출 상승의 핵심 요인. 1순위 레티날 부스터 단가 정책 강화가 효과적.</div></div></div>
+  <div class="li"><div class="ln">3</div><div><div class="lt">종료일(6/10) 매출 +50.3% — 마감 푸시 효과 큰 폭 ⭐</div><div class="ld">¥30,896,938(3/11) → ¥46,452,112(6/10). 종료일 구매 전환율 21.98%로 기간 평균 11.93% 대비 1.84배. 종료임박 캠페인 ₩961,704 + ASC 1순위 ₩4,000,000 집중 푸시가 효과적.</div></div></div>
+  <div class="li"><div class="ln">4</div><div><div class="lt">메가와리향 ASC 캠페인 CTR 4.38%</div><div class="ld">메가와리향 광고비 ₩21,437,331(전체 META의 5.6%)로 ASC 캠페인 CTR 4.38% 달성. 트래픽 캠페인 CPC ₩118로 광고비 효율 우수한 수준.</div></div></div>
+  <div class="li"><div class="ln">5</div><div><div class="lt">유입자수 +15.4% / 신규 고객 비율 65.8% 유지</div><div class="ld">유입자수 748,584 → 863,599. 신규 67,741명(+9.3%) / 기존 35,249명(+17.0%) 모두 증가. 신규 고객 풀 확장과 동시에 기존 고객 재구매 흐름 동반 확인.</div></div></div>
+ </div>
+</div></section>
+
+<section id="next"><div class="wrap">
+ <span class="eyebrow">08 · 개선점 · NEXT</span>
+ <h2 class="sec">다음 메가와리, 무엇을 바꿀까</h2>
+
+ <div class="grid g3">
+  <div class="card"><div class="no">개선 01</div><h3>자사몰 PS 캠페인 ROAS 측정 재검토</h3><p>자사몰 랜딩 PS 광고비 ₩361,773,111 대비 META 픽셀 추적 ROAS 1.1%. 자사몰 쿠션페이지 → Qoo10 attribution 추적 구조의 한계로 추정. 브랜드사와 측정 방식 점검 필요.</p></div>
+  <div class="card"><div class="no">개선 02</div><h3>저효율 지면 광고비 재분배</h3><p>Threads_feed CTR 0.84% / Facebook_instream_video 1.21% 등 저효율 지면 광고비를 Instagram 3종 지면(CTR 4.8~5.8%)으로 추가 이동.</p></div>
+  <div class="card"><div class="no">개선 03</div><h3>신규 소재 시도 방향성 재정립</h3><p>임상 데이터(집행 불가) / 카드뉴스(OFF) 모두 진행 어려움. 영상+할인 배너 + 1순위 레티날 부스터 중심 검증 소재 위주 운영 권장.</p></div>
+ </div>
+
+ <div class="steps" style="margin-top:28px">
+  <div class="step"><div class="sn">NEXT 01</div><h4>1순위 자산 유지·강화</h4><p>레티날 부스터 광고세트 광고비 비중 40% 유지. 광고 소재 라인업 확장 검토.</p><span class="arr">→</span></div>
+  <div class="step"><div class="sn">NEXT 02</div><h4>종료일 마감 푸시 정형화</h4><p>종료임박 캠페인(6/5~6/10) + 한정 세트 운영 패턴 표준화. 종료일 +50.3% 흐름 재현 목표.</p><span class="arr">→</span></div>
+  <div class="step"><div class="sn">NEXT 03</div><h4>중장년층 타겟 강화</h4><p>45~64세 CTR 4.4~5.2% 핵심 타겟층 확인. 해당 연령대 소구 콘셉트(주름·탄력) 광고 확장.</p><span class="arr">→</span></div>
+  <div class="step"><div class="sn">NEXT 04</div><h4>주말쿠폰 효과 재활용</h4><p>6/6(토) +114.8%, 6/9(D-1) +81.4% 흐름 확인. 주말쿠폰 + 종료일 마감 푸시 운영 패턴 표준화.</p></div>
+ </div>
+
+ <div class="callout navy">7월 자사몰 운영 스킴(7/15~7/29) 전달 요청드립니다. 6월 메가와리에서 확인된 <b>'단가 정책 강화 + 1순위 레티날 부스터 집중 운영 + 종료일 푸시 + Instagram 지면 + 중장년 타겟 강화'</b> 공식을 차기 시즌 표준으로 운영 권장합니다.</div>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fbrand">valen<b> × </b>셀리맥스</div>
+ <div class="fnote">Qoo10 메가와리 6월 종합 회고록 · 분석 기간 2026.05.29–06.10 (13일) · 티저 기간 2026.05.25–05.29 17:00 (5일)<br>
+   데이터 출처: Qoo10 셀러 리포트 (Transaction · CVR · Customer) · META Ads Manager · SingleONE 통계 · Adriel 대시보드.<br>
+   매출은 엔화(¥) 기준 / META 광고비는 원화(₩) 기준 (KRW 광고 계정) / SingleONE·인앱 광고비는 ¥엔 기준 / 환율 9.504641 적용.<br>
+   © 2026 Valenlife Corporation · Confidential</div>
+</div></footer>
+
+</body>
+</html>
